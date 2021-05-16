@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>uk.org.oliveira.triples_language_intellij</id>
+    <name>TripleS Language</name>
+    <vendor email="victor@oliveira.org.uk" url="http://oliveira.org.uk">Oliveira.org.uk</vendor>
+
+    <description><![CDATA[
+    Add support for TripleS Language, created by Victor Oliveira.
+    ]]> </description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <fileType name="TripleS File"
+                  implementationClass="uk.org.oliveira.language.TripleSFileType"
+                  fieldName="INSTANCE"
+                  language="TripleS"
+                  extensions="sss"/>
+
+        <fileTypeFactory implementation="uk.org.oliveira.language.TripleSFileTypeFactory"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
